@@ -1,5 +1,7 @@
 name: gh-actions-demo
 on: [ push, workflow_dispatch ]
+env:
+  FILE_NAME: demo-text.txt
 jobs:
   development:
     runs-on: ubuntu-latest
@@ -17,7 +19,7 @@ jobs:
       - name: Check content
         run: |
           echo "Checking content"
-          cat demo-text.txt
+          cat ${{ env.FILE_NAME }}
 
 
     # runs-on: ubuntu-latest
