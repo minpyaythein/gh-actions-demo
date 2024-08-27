@@ -1,0 +1,12 @@
+name: gh-actions-demo
+on: push
+jobs:
+  development:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refinement
+        run: echo "リファインメントできた！"
+      - name: Planning
+        run: echo "プランニングできた！"
+      - name: Coding
+        run: echo "コーディングできた！"
