@@ -4,9 +4,27 @@ jobs:
   development:
     runs-on: ubuntu-latest
     steps:
-      - name: Refinement
-        run: echo "リファインメントできた！"
-      - name: Planning
-        run: echo "プランニングできた！"
-      - name: Coding
-        run: echo "コーディングできた！"
+      - name: Check files before checkout
+        run: |
+          echo "Checking files before checkout"
+          ls -la
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Check files after checkout
+        run: |
+          echo "Checking files after checkout"
+          ls -la
+      - name: Check content
+        run: |
+          echo "Checking content"
+          cat demo-text.txt
+
+
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: refinement
+    #     run: echo "リファインメントできた！"
+    #   - name: planning
+    #     run: echo "プランニングできた！"
+    #   - name: coding
+    #     run: echo "コーディングできた！"
