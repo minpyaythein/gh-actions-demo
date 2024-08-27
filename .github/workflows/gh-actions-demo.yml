@@ -5,25 +5,28 @@ env:
 jobs:
   development:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-    continue-on-error: true
+    # strategy:
+    #   matrix:
+    #     os: [ubuntu-latest, windows-latest, macos-latest]
+    # continue-on-error: true
     steps:
-      - name: Check files before checkout
-        run: |
-          echo "Checking files before checkout"
-          ls -la
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Check files after checkout
-        run: |
-          echo "Checking files after checkout"
-          ls -la
-      - name: Check content
-        run: |
-          echo "Checking content"
-          cat ${{ env.FILE_NAME }}
+      - name: カスタムアクション
+        uses: ./.github/actions/demo-action
+
+      # - name: Check files before checkout
+      #   run: |
+      #     echo "Checking files before checkout"
+      #     ls -la
+      # - name: Checkout
+      #   uses: actions/checkout@v4
+      # - name: Check files after checkout
+      #   run: |
+      #     echo "Checking files after checkout"
+      #     ls -la
+      # - name: Check content
+      #   run: |
+      #     echo "Checking content"
+      #     cat ${{ env.FILE_NAME }}
 
 
     # runs-on: ubuntu-latest
