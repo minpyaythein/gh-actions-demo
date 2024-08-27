@@ -1,0 +1,8 @@
+name: demo-action
+description: "demo action"
+runs:
+  using: 'composite'
+  steps:
+    - name: カスタムアクションの実行
+      run: echo "カスタムアクションの実行"
+      shell: bash
