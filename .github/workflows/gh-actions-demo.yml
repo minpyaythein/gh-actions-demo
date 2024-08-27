@@ -1,7 +1,7 @@
 name: gh-actions-demo
 on: [ push, workflow_dispatch ]
 env:
-  FILE_NAME: demo-text.txt
+  FILE_NAME: ${{ secrets.FILE_NAME }}
 jobs:
   development:
     runs-on: ubuntu-latest
