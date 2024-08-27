@@ -5,6 +5,10 @@ env:
 jobs:
   development:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    continue-on-error: true
     steps:
       - name: Check files before checkout
         run: |
