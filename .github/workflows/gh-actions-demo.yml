@@ -10,15 +10,15 @@ jobs:
     #     os: [ubuntu-latest, windows-latest, macos-latest]
     # continue-on-error: true
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: カスタムアクション
-        uses: ./actions/demo-action
+        uses: ./.github/actions/demo-action
 
       # - name: Check files before checkout
       #   run: |
       #     echo "Checking files before checkout"
       #     ls -la
-      # - name: Checkout
-      #   uses: actions/checkout@v4
       # - name: Check files after checkout
       #   run: |
       #     echo "Checking files after checkout"
