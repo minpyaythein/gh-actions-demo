@@ -1,5 +1,5 @@
 name: gh-actions-demo
-on: push
+on: [ push, workflow_dispatch ]
 jobs:
   development:
     runs-on: ubuntu-latest
