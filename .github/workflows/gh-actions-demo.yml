@@ -11,7 +11,7 @@ jobs:
     # continue-on-error: true
     steps:
       - name: カスタムアクション
-        uses: ./.github/actions/demo-action
+        uses: ./actions/demo-action
 
       # - name: Check files before checkout
       #   run: |
